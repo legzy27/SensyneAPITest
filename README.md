@@ -67,3 +67,5 @@ While following a CI/CD pipeline, the main motive of a QA is to minimize bugs du
 
 
 
+# CI/CD diagram proposal for Automated and API Tests
+- Check image folder 
