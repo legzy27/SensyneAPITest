@@ -1,0 +1,36 @@
+{
+  "name": "relish",
+  "version": "1.0.0",
+  "description": "ATDD for REST API development based on Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumberjs --require lib",
+    "test-debug": "cross-env DEBUG=true cucumberjs --require lib",
+    "test:update-serenity": "serenity-bdd update",
+    "test:acceptance": "/* invoke the test runner */",
+    "test:report": "serenity-bdd run",
+    "tests": "failsafe test:acceptance test:update-serenity test:report",
+    "verify": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carbonrobot/relish.git"
+  },
+  "dependencies": {
+    "@serenity-js/assertions": "^2.2.2",
+    "@serenity-js/core": "^2.2.2",
+    "@serenity-js/rest": "^2.2.2",
+    "@serenity-js/serenity-bdd": "^2.3.0",
+    "cross-env": "^1.0.8",
+    "lodash": "^4.13.1",
+    "moment": "^2.13.0",
+    "random-words": "0.0.1",
+    "request-promise": "^3.0.0"
+  },
+  "devDependencies": {
+    "assert": "^1.5.0",
+    "cucumber": "^1.3.3",
+    "cucumber-html-reporter": "^5.2.0",
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.1"
+  }
+}
